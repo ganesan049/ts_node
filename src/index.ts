@@ -16,7 +16,7 @@ app.use(express.json());
 
 app.use("/api",router);
 
-mongoose.connect('mongodb+srv://gans:h2STyFxD904o4gp5@cluster0.psmkd.mongodb.net/test?retryWrites=true&w=majority',{
+mongoose.connect(process.env.URI,{
     useNewUrlParser: true,
     useCreateIndex: true,
     useFindAndModify: false,
